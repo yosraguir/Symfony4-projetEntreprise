@@ -1,0 +1,102 @@
+{% extends "Employee/layaout.html.twig" %}
+{% block title %}
+{{parent()}} -Modifier Employee
+{% endblock %}
+{% block job_body %}
+    <!-- Main Content -->
+    <div class="main-content">
+      <section class="section">
+        <div class="section-header">
+          <h1>Form Validation</h1>
+          <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+            <div class="breadcrumb-item"><a href="#">Forms</a></div>
+            <div class="breadcrumb-item">Form Validation</div>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="row">
+            
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="card">
+                <form class="needs-validation" novalidate method="Post" action="{{ path('modif') }}">
+                  <div class="card-header">
+                    <h4>JavaScript Validation</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">id</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="id"  value={{employee.id}} required>
+                         <div class="invalid-feedback">
+                            please enter your name?
+                          </div>
+                        </div>
+                      </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Cin</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" name="cin"  value={{employee.cin}} required>
+                       <div class="invalid-feedback">
+                          please enter your name?
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" name="name"  value={{employee.name}} required>
+                        <div class="invalid-feedback">
+                          name is invalid. 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">position</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control"  name="position" value={{employee.position}}>
+                        <div class="valid-feedback">
+                          done.
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="form-group mb-0 row">
+                      <label class="col-sm-3 col-form-label">Age</label>
+                      <div class="col-sm-9">
+                        <input class="form-control" name="age"  required value={{employee.age}}>
+                        <div class="invalid-feedback">
+                          please provide message.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mb-0 row">
+                      <label class="col-sm-3 col-form-label">salary</label>
+                      <div class="col-sm-9">
+                        <input class="form-control" name="salary"  required value={{employee.salary}}>
+                        <div class="invalid-feedback">
+                          please provide message.
+                        </div>
+                      </div>
+                    </div>
+                
+                    <div class="form-group mb-0 row">
+                      <label class="col-sm-3 col-form-label">Role</label>
+                      <div class="col-sm-9">
+                        <input class="form-control" name="role"  required value={{employee.role}}>
+                        <div class="invalid-feedback">
+                          please provide message.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-right">
+                    <button class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+              
+    </div>
+  </div>
+    </div>
+{% endblock %}

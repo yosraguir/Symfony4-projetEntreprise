@@ -1,0 +1,4 @@
+twig:
+    strict_variables: true
+    form_themes:
+        - 'bootstrap_3_ajouter.html.twig'
